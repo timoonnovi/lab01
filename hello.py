@@ -1,8 +1,8 @@
 import typer
 
 def main(
-    name: str,
-    lastname: str = typer.Option("", help="Фамилия пользователя."),
+    name: str, # Imya polzovatelya
+    lastname: str = typer.Option("", help="Фамилия пользователя."), # Familiya polzivatelya
     formal: bool = typer.Option(False, "--formal", "-f", help="Использовать формальное приветствие."),
 ):
     """
