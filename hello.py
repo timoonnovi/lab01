@@ -1,6 +1,5 @@
 import typer
 
-
 def Main(
     Name: str, # User's name
     LastName: str = typer.option("", help="Фамилия пользователя."), # Familiya polzivatelya
