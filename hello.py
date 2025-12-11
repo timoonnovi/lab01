@@ -1,17 +1,17 @@
 import typer
 
-def main(
-    name: str, # Imya polzovatelya
-    lastname: str = typer.Option("", help="Фамилия пользователя."), # Familiya polzivatelya
-    formal: bool = typer.Option(False, "--formal", "-f", help="Использовать формальное приветствие."),
+def Main(
+    Name: str, # Imya polzovatelya
+    LastName: str = typer.option("", help="Фамилия пользователя."), # Familiya polzivatelya
+    Formal: bool = typer.option(False, "--formal", "-f", help="Использовать формальное приветствие."),
 ):
     """
     Говорит "Привет" пользователю, опционально используя фамилию и формальный стиль.
     """
-    if formal:
-        print(f"Добрый день, {name} {lastname}!")
+    if Formal:
+        print(f"Добрый день, {Name} {LastName}!")
     else:
-        print(f"Привет, {name}!")
+        print(f"Привет, {Name}!")
 
 if __name__ == "__main__":
     typer.run(main)
